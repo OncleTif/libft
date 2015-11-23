@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 14:53:28 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/23 15:53:49 by tmanet           ###   ########.fr       */
+/*   Created: 2015/11/23 15:52:45 by tmanet            #+#    #+#             */
+/*   Updated: 2015/11/23 15:58:17 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "ft.h"
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	*ft_memset(void *b, int c, size_t len);
-int		ft_toupper(int c);
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != 0)
+	{
+		ft_putchar(str[i]);
+	}
+}
