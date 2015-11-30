@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:30:48 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/30 12:25:27 by tmanet           ###   ########.fr       */
+/*   Created: 2015/11/30 12:22:34 by tmanet            #+#    #+#             */
+/*   Updated: 2015/11/30 12:25:02 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	ft_putchar(char c)
+void	ft_putstr_fd(char *str, int fd)
 {
-	ft_putchar_fd(c, 1);
+	int	i;
+
+	i = 0;
+	while (str[i] != 0)
+	{
+		ft_putchar_fd(str[i], fd);
+		i++;
+	}
 }

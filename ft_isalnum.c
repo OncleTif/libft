@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:30:48 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/30 12:25:27 by tmanet           ###   ########.fr       */
+/*   Created: 2015/11/23 17:11:09 by tmanet            #+#    #+#             */
+/*   Updated: 2015/11/30 12:26:48 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	ft_putchar(char c)
+int	ft_isalnum(int c)
 {
-	ft_putchar_fd(c, 1);
+	if (ft_isdigit(c) || ft_isalpha(c))
+		return (1);
+	return (0);
 }
