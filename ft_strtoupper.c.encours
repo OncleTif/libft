@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strtoupper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:30:48 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/30 13:34:21 by tmanet           ###   ########.fr       */
+/*   Created: 2015/11/23 16:10:32 by tmanet            #+#    #+#             */
+/*   Updated: 2015/11/23 16:15:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft.h"
 
-void	ft_putchar(char c)
+char	*ft_strtoupper(char *str)
 {
-	ft_putchar_fd(c, 1);
+int	i;
+
+i = 0;
+while (str[i] != 0)
+{
+
+}
 }

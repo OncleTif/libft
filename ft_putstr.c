@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:52:45 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/23 16:06:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/11/30 13:53:21 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(char const *str)
 {
 	int	i;
 

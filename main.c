@@ -6,24 +6,20 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:19:23 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/23 15:27:53 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/11/30 13:54:28 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft.h"
+#include "libft.h"
 
-int	main(int argc,char **argv)
+int	main(int argc, char **argv)
 {
 	int		i;
-	char	*str;
 
-	if (argc > 1)
+	i = 1;
+	while (argc > i)
 	{
-
-
+		i++;
 	}
-	else
-	{
-		return 1;
-	}
+	return (0);
 }

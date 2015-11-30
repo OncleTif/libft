@@ -6,11 +6,11 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:31:28 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/23 16:35:09 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/11/30 13:36:36 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

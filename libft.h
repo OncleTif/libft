@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/30 12:48:23 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/11/30 13:52:21 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 # include <string.h>
 
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *str, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
 void	ft_putchar(char c);
-void	ft_putstr(char *str);
+void	ft_putstr(char const *s);
 void	*ft_memset(void *b, int c, size_t len);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
