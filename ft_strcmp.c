@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 11:53:30 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/01 13:20:09 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/01 13:23:20 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/01 13:29:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t			i;
-	char			*src_char;
-	char			*dst_char;
-	unsigned char	pattern;
+	int	i;
 
 	i = 0;
-	src_char = (char*)src;
-	dst_char = (char*)dst;
-	pattern = (char)c;
-	while (i < n && src_char[i] != pattern)
-	{
-		dst_char[i] = src_char[i];
+	while (s1[i] == s2[i] && s1[i])
 		i++;
-	}
-	if (src_char[i] == pattern)
-	{
-		return (&dst_char[i + 1]);
-	}
-	return (NULL);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

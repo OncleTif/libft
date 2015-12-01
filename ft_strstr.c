@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 11:53:30 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/01 13:20:09 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/01 16:17:25 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/01 17:13:36 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strstr(const char *s1, const char *s2)
 {
-	size_t			i;
-	char			*src_char;
-	char			*dst_char;
-	unsigned char	pattern;
+	int		i;
+	int		j;
+	int		found;
 
 	i = 0;
-	src_char = (char*)src;
-	dst_char = (char*)dst;
-	pattern = (char)c;
-	while (i < n && src_char[i] != pattern)
+	j = 0;
+	found = 0;
+	while (s1[i])
 	{
-		dst_char[i] = src_char[i];
+		if (!s2[j])
+			return ((char*)&s1[i - j]);
+		if (s1[i] == s2[j])
+			j++;
+		else
+			j = 0;
 		i++;
 	}
-	if (src_char[i] == pattern)
-	{
-		return (&dst_char[i + 1]);
-	}
+	if (!s2[j])
+		return ((char*)&s1[i - j]);
 	return (NULL);
 }

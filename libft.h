@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/01 11:55:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/01 16:52:22 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
-void    *ft_memcpy(void *dst, const void *src, size_t n);
-void    *ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	ft_memdel(void **ap);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -38,4 +38,11 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 size_t	ft_strlen(const char *s);
 void	ft_strclr(char *s);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strstr(const char *s1, const char *s2);
 #endif
