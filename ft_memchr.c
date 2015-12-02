@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 11:53:30 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 16:31:54 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 15:35:04 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 15:46:58 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
-	char			*src_char;
-	char			*dst_char;
-	unsigned char	pattern;
+	size_t	i;
+	char	*s_char;
+	char	pattern;
 
+	s_char = (char*)s;
 	i = 0;
-	src_char = (char*)src;
-	dst_char = (char*)dst;
-	pattern = (char)c;
-	while (i < n && src_char[i] != pattern)
-	{
-		dst_char[i] = src_char[i];
+	pattern = (unsigned char)c;
+	while (s_char[i] && s_char[i] != pattern)
 		i++;
-	}
-	if (src_char[i] == pattern)
-	{
-		dst_char[i] = src_char[i];
-		return (dst_char + i + 1);
-	}
+	if (s_char[i] == pattern)
+		return ((void*)(s + i));
 	return (NULL);
 }

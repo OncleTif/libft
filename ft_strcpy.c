@@ -1,37 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 11:53:30 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 16:31:54 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 16:00:20 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 16:08:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	size_t			i;
-	char			*src_char;
-	char			*dst_char;
-	unsigned char	pattern;
-
-	i = 0;
-	src_char = (char*)src;
-	dst_char = (char*)dst;
-	pattern = (char)c;
-	while (i < n && src_char[i] != pattern)
-	{
-		dst_char[i] = src_char[i];
-		i++;
-	}
-	if (src_char[i] == pattern)
-	{
-		dst_char[i] = src_char[i];
-		return (dst_char + i + 1);
-	}
-	return (NULL);
+	ft_memccpy(dst, src, 0, -1);
+	return (dst);
 }

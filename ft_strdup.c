@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 11:53:30 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 16:31:54 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 15:50:41 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 16:28:29 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*strdup(const char *s1)
 {
-	size_t			i;
-	char			*src_char;
-	char			*dst_char;
-	unsigned char	pattern;
+	char	*ptr;
+	size_t	size;
 
-	i = 0;
-	src_char = (char*)src;
-	dst_char = (char*)dst;
-	pattern = (char)c;
-	while (i < n && src_char[i] != pattern)
+	size = ft_strlen(s1);
+	ptr = ft_strnew(size);
+	if (!ptr)
 	{
-		dst_char[i] = src_char[i];
-		i++;
+		errno = ENOMEM;
+		return (NULL);
 	}
-	if (src_char[i] == pattern)
-	{
-		dst_char[i] = src_char[i];
-		return (dst_char + i + 1);
-	}
+	ptr = ft_strcpy(ptr, s1);
 	return (NULL);
 }
