@@ -1,33 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:19:23 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 10:43:08 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 09:41:37 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 14:21:21 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(int argc, char **argv)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		i;
-	int		result;
+	unsigned int	buf;
+	int				range;
 
-	i = 1;
-	while (argc > i)
+	if (n < 0)
 	{
-		result = atoi(argv[i]);
-		printf("%d", result);
-		ft_putnbr(result);
-		ft_putchar('\n');
-		result = ft_atoi(argv[i]);
-		ft_putnbr(result);
-		ft_putchar('\n');
-		i++;
+		ft_putchar_fd('-', fd);
+		buf = n * -1;
 	}
-	return (argc * 0);
+	else
+	{
+		buf = n;
+	}
+	range = ft_range(buf);
+	while (range)
+	{
+		ft_putchar_fd((buf / range + '0'), fd);
+		buf = buf % range;
+		range = range / 10;
+	}
+}
+
+int		ft_range(unsigned int nbr)
+{
+	int	range;
+
+	range = 1;
+	while (nbr >= 10)
+	{
+		range = range * 10;
+		nbr = nbr / 10;
+	}
+	return (range);
 }

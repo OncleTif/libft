@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 10:42:23 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/01 11:20:09 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/02 10:53:41 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,10 @@ int	ft_atoi(const char *str)
 		neg = -1;
 		i++;
 	}
-	while (str[i])
+	while (str[i] && ft_isdigit(str[i]))
 	{
-		if (ft_isdigit(str[i]))
-		{
-			nbr = nbr * 10 + (str[i] - '0');
-		}
+		nbr = nbr * 10 + (str[i] - '0');
 		i++;
 	}
-	return (nbr);
+	return (nbr * neg);
 }

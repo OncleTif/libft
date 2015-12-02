@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:19:23 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 10:43:08 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 14:13:44 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 14:19:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(int argc, char **argv)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		i;
-	int		result;
+	unsigned int	i;
 
-	i = 1;
-	while (argc > i)
+	i = 0;
+	while (s[i])
 	{
-		result = atoi(argv[i]);
-		printf("%d", result);
-		ft_putnbr(result);
-		ft_putchar('\n');
-		result = ft_atoi(argv[i]);
-		ft_putnbr(result);
-		ft_putchar('\n');
+		f(i, s + i);
 		i++;
 	}
-	return (argc * 0);
 }

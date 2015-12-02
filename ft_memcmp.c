@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:19:23 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 10:43:08 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 14:23:56 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 14:47:18 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(int argc, char **argv)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	int		result;
+	size_t	i;
+	char	*s1_char;
+	char	*s2_char;
 
-	i = 1;
-	while (argc > i)
-	{
-		result = atoi(argv[i]);
-		printf("%d", result);
-		ft_putnbr(result);
-		ft_putchar('\n');
-		result = ft_atoi(argv[i]);
-		ft_putnbr(result);
-		ft_putchar('\n');
+	i = 0;
+	s1_char = (char*)s1;
+	s2_char = (char*)s2;
+	while (s1_char[i] == s2_char[i] && i < n)
 		i++;
-	}
-	return (argc * 0);
+	return ((unsigned char)s1_char[i] - (unsigned char)s2_char[i]);
 }

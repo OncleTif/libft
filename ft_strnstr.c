@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:19:23 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 10:43:08 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 09:31:29 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 09:39:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(int argc, char **argv)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	int		result;
+	size_t	i;
+	size_t	j;
 
-	i = 1;
-	while (argc > i)
+	i = 0;
+	j = 0;
+	while (s1[i] && i < n)
 	{
-		result = atoi(argv[i]);
-		printf("%d", result);
-		ft_putnbr(result);
-		ft_putchar('\n');
-		result = ft_atoi(argv[i]);
-		ft_putnbr(result);
-		ft_putchar('\n');
+		if (!s2[j])
+			return ((char*)&s1[i - j]);
+		if (s1[i] == s2[j])
+			j++;
+		else
+			j = 0;
 		i++;
 	}
-	return (argc * 0);
+	if (!s2[j])
+		return ((char*)&s1[i - j]);
+	return (NULL);
 }

@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 15:19:23 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 10:43:08 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/02 11:14:01 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/02 13:24:42 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(int argc, char **argv)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	int		result;
 
-	i = 1;
-	while (argc > i)
-	{
-		result = atoi(argv[i]);
-		printf("%d", result);
-		ft_putnbr(result);
-		ft_putchar('\n');
-		result = ft_atoi(argv[i]);
-		ft_putnbr(result);
-		ft_putchar('\n');
-		i++;
-	}
-	return (argc * 0);
+if (dst > src && dst < src + len)
+{
+
+}
+else
+ft_memcpy(dst, src, len);
+return (dst);
 }
