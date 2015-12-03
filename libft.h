@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 16:56:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/03 10:22:11 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t n);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-char	*strdup(const char *s1);
+size_t	ft_strlcat(char *s1, const char *s2, size_t n);
+char	*ft_strdup(const char *s1);
 void	ft_memdel(void **ap);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -41,6 +42,7 @@ int		ft_atoi(const char *str);
 int		ft_isprint(int c);
 int		ft_isascii(int c);
 int		ft_isalpha(int c);
+int		ft_isalnum(int c);
 int		ft_isdigit(int c);
 size_t	ft_strlen(const char *s);
 void	ft_strclr(char *s);
