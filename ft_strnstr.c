@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 09:31:29 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 09:39:15 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/03 14:50:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		if (s1[i] == s2[j])
 			j++;
 		else
+		{
+			i = i - j;
 			j = 0;
+		}
 		i++;
 	}
 	if (!s2[j])

@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 15:57:38 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/01 16:13:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/03 13:54:32 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(char const *s, int c)
+char	*ft_strrchr(char const *s, int c)
 {
 	int	i;
 
