@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 16:22:32 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/03 16:57:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/04 09:46:34 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	ft_memccpy(dst, src, 0, n);
+	char	*dst_end;
+
+	dst_end = (char*)ft_memccpy(dst, src, 0, n);
+	if (!dst_end)
+		return (dst);
+	if ((dst + n) > dst_end)
+		ft_bzero((dst_end ), n - (dst_end - dst));
 	return (dst);
 }

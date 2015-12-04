@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 10:27:33 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/03 14:39:17 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/03 17:11:35 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 
 	dst_size = ft_strlen(dst);
 	if (dst_size >= n)
-		return (ft_strlen(src) + dst_size);
+		return (ft_strlen(src) + n);
 	dst_pos = dst_size;
 	i = 0;
 	while (dst_pos < n && src[i])

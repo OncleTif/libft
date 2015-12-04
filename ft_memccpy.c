@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 11:53:30 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/03 16:45:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/03 17:30:40 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		dst_char[i] = src_char[i];
 		i++;
 	}
+	if (n == i)
+		return (NULL);
 	if (src_char[i] == pattern)
 	{
 		dst_char[i] = src_char[i];

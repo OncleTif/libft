@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:50:41 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/03 13:58:07 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/03 17:09:06 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strdup(const char *s1)
 		return (NULL);
 	}
 	ptr = ft_strcpy(ptr, s1);
-	return (NULL);
+	return (ptr);
 }
