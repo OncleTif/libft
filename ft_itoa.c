@@ -1,25 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 16:22:32 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/04 12:15:10 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/04 12:48:41 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/04 13:04:58 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_itoa(int n)
 {
-	char	*dst_end;
+	int				neg;
+	unsigned int	nbr;
+	size_t			range;
+	char			*ptr;
+	int				i;
 
-	dst_end = (char*)ft_memccpy(dst, src, 0, n);
-	if (!dst_end)
-		return (dst);
-	if ((dst + n) > dst_end)
-		ft_bzero((dst_end), n - (dst_end - dst));
-	return (dst);
+	i = 0;
+	neg = 1;
+	if (n < 0)
+		neg = -1;
+	nbr = n * neg;
+	range = ft_range(nbr);
+	ptr = ft_strnew(range + 1 + (neg == -1));
+	if (!ptr)
+		return (NULL);
+	if (neg == -1)
+	{
+		ptr[i] = '-';
+		i++;
+	}
+	while (range)
+	{
+		ptr[i] = nbr / range + '0';
+		range = range / 10;
+		i++;
+ 	}
+	return (ptr);
 }

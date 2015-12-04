@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 16:22:32 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/04 12:15:10 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/04 10:46:57 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/04 12:12:14 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*dst_end;
+	size_t	s1_size;
+	size_t	s2_size;
+	char	*ptr;
 
-	dst_end = (char*)ft_memccpy(dst, src, 0, n);
-	if (!dst_end)
-		return (dst);
-	if ((dst + n) > dst_end)
-		ft_bzero((dst_end), n - (dst_end - dst));
-	return (dst);
+	s1_size = ft_strlen(s1);
+	s2_size = ft_strlen(s2);
+	ptr = ft_strnew(s1_size + s2_size + 1);
+	if (!ptr)
+		return (NULL);
+	ft_strcpy(ptr, s1);
+	ft_strcpy(ptr + s1_size + 1, s2);
+	return (ptr);
 }

@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/02 11:56:45 by tmanet            #+#    #+#              #
-#    Updated: 2015/12/03 14:14:47 by tmanet           ###   ########.fr        #
+#    Updated: 2015/12/04 13:06:19 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_strdup.c ft_strequ.c ft_striter.c ft_striteri.c ft_strlcat.c \
 	  ft_strlen.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c \
 	  ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strstr.c ft_tolower.c \
-	  ft_toupper.c
+	  ft_toupper.c ft_strmap.c ft_strmapi.c ft_strsub.c ft_strjoin.c \
+	  ft_strtrim.c ft_strsplit.c ft_itoa.c
 OBJ = $(SRC:.c=.o)
 
 all: $(OBJ) $(NAME)
