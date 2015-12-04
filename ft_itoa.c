@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 12:48:41 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/04 13:04:58 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/04 13:13:46 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,9 @@ char	*ft_itoa(int n)
 	while (range)
 	{
 		ptr[i] = nbr / range + '0';
+		nbr = nbr % range;
 		range = range / 10;
 		i++;
- 	}
+	}
 	return (ptr);
 }

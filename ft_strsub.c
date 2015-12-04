@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 10:31:27 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/04 10:45:43 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/04 13:39:48 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	ptr = ft_strnew(len + 1);
 	if (!ptr)
 		return (NULL);
-	while (s[i] && start + i < len)
+	while (s[start + i] && i < len)
 	{
 		ptr[i] = s[start + i];
 		i++;

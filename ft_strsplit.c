@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 11:25:56 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/04 12:47:37 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/04 14:09:10 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_strsplit(char const *s, char c)
 	str = (char*)s;
 	word_nb = 0;
 	word_size = ft_word_count(s, c);
-	ptr = ft_memalloc(word_size);
+	ptr = ft_memalloc(word_size + 1);
 	if (!ptr)
 		return (NULL);
 	while (word_nb < word_size)
@@ -74,5 +74,6 @@ char	**ft_strsplit(char const *s, char c)
 			return (NULL);
 		word_nb++;
 	}
+	ptr[word_size + 1] = NULL;
 	return (ptr);
 }

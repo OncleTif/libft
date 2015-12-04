@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 10:46:57 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/04 12:12:14 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/04 13:30:29 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!ptr)
 		return (NULL);
 	ft_strcpy(ptr, s1);
-	ft_strcpy(ptr + s1_size + 1, s2);
+	ft_strcpy(ptr + s1_size, s2);
 	return (ptr);
 }
