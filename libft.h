@@ -6,16 +6,15 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/07 15:25:32 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/07 17:19:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
 # include <unistd.h>
-# include <string.h>
 # include <stdlib.h>
+# include <string.h>
 # include <errno.h>
 
 typedef struct		s_list

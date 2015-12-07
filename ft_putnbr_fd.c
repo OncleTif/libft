@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 09:41:37 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 14:21:21 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/07 16:46:13 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,4 @@ void	ft_putnbr_fd(int n, int fd)
 		buf = buf % range;
 		range = range / 10;
 	}
-}
-
-int		ft_range(unsigned int nbr)
-{
-	int	range;
-
-	range = 1;
-	while (nbr >= 10)
-	{
-		range = range * 10;
-		nbr = nbr / 10;
-	}
-	return (range);
 }
