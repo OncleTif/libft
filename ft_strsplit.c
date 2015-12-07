@@ -5,83 +5,77 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 11:25:56 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/07 10:52:19 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/07 13:59:57 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/07 15:23:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_word_count(char const *s, char c)
+size_t	ft_wordcount(char const *s, char c)
 {
-	size_t	i;
-	size_t	word;
 	int		in_word;
+	size_t	n_word;
+	size_t	i;
 
-	i = 0;
-	word = 0;
 	in_word = 0;
+	n_word = 0;
+	i = 0;
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
 			if (!in_word)
-			{
-				in_word = 1;
-				word++;
-			}
+				n_word++;
+			in_word = 1;
 		}
 		else
 			in_word = 0;
 		i++;
 	}
-	return (word);
+	return (n_word);
 }
 
-char	*ft_word_split(char **tab, size_t cell, char const *str, char c)
+char	*ft_wordpicker(char *str, char **ptr, char c)
 {
-	size_t	word_start;
-	size_t	word_size;
-	char	*ptr;
+	size_t	word_begin;
+	size_t	word_end;
+	char	*word;
 
-	word_start = 0;
-	while (str[word_start] == c)
-		word_start++;
-	word_size = word_start;
-	while (str[word_size] && str[word_size] != c)
-		word_size++;
-	word_size = word_size - word_start;
-	ptr = ft_strnew(word_size + 1);
-	if (!ptr)
-		return (NULL);
-	tab[cell] = ft_strncpy(ptr, str + word_start, word_size);
-	return ((char*)(str + word_start + word_size));
+	word_begin = 0;
+	word_end = 0;
+	while (str[word_begin] == c)
+		word_begin++;
+	word_end = word_begin;
+	while (str[word_end] && str[word_end] != c)
+		word_end++;
+	word = ft_strsub(str, word_begin, word_end - word_begin);
+	*ptr = word;
+	return (str + word_end);
 }
 
 char	**ft_strsplit(char const *s, char c)
 {
-	size_t	word_size;
-	size_t	word_nb;
+	size_t	n_word;
 	char	**ptr;
 	char	*str;
+	size_t	i;
 
 	ptr = NULL;
+	i = 0;
 	if (s)
 	{
 		str = (char*)s;
-		word_nb = 0;
-		word_size = ft_word_count(s, c);
-		ptr = ft_memalloc(word_size + 1);
+		n_word = ft_wordcount(s, c);
+		ptr = (char**)ft_memalloc((n_word + 1) * sizeof(char*));
 		if (!ptr)
 			return (NULL);
-		while (word_nb < word_size)
+		while (i < n_word)
 		{
-			str = ft_word_split(ptr, word_nb, str, c);
-			if (!str)
-				return (NULL);
-			word_nb++;
+			str = ft_wordpicker(str, ptr + i, c);
+			i++;
 		}
-		ptr[word_size] = NULL;
+		ptr[n_word] = 0;
 	}
 	return (ptr);
 }
