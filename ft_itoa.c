@@ -6,11 +6,25 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 12:48:41 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/04 13:13:46 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/07 11:05:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_uitoaa(unsigned int nbr, size_t range, char *ptr)
+{
+	int				i;
+
+	i = 0;
+	while (range)
+	{
+		ptr[i] = nbr / range + '0';
+		nbr = nbr % range;
+		range = range / 10;
+		i++;
+	}
+}
 
 char	*ft_itoa(int n)
 {
@@ -34,12 +48,6 @@ char	*ft_itoa(int n)
 		ptr[i] = '-';
 		i++;
 	}
-	while (range)
-	{
-		ptr[i] = nbr / range + '0';
-		nbr = nbr % range;
-		range = range / 10;
-		i++;
-	}
+	ft_uitoaa(nbr, range, ptr + i);
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:21:27 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/30 16:21:29 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/07 11:06:14 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void	ft_strclr(char *s)
 {
 	size_t	length;
 
-	length = ft_strlen(s);
-	ft_bzero(s, length);
+	if (s)
+	{
+		length = ft_strlen(s);
+		ft_bzero(s, length);
+	}
 }

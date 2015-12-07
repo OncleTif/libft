@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 13:49:51 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/01 13:55:23 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/07 10:45:43 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	if (!ft_strncmp(s1, s2, n))
-		return (1);
+	if (s1 && s2)
+	{
+		if (!ft_strncmp(s1, s2, n))
+			return (1);
+	}
 	return (0);
 }

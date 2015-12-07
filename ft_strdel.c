@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 09:03:13 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/02 14:38:16 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/07 10:34:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void**)as);
+	if (as)
+	{
+		ft_memdel((void**)as);
+		*as = NULL;
+	}
 }
