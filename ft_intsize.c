@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_intsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 10:06:46 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/10 10:22:16 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/10 10:41:51 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/10 10:42:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+int		ft_intsize(unsigned int nbr)
 {
 	size_t	i;
-	char	*ptr;
 
-	ptr = NULL;
-	if (s && f)
+	i = 1;
+	while (nbr > 9)
 	{
-		i = ft_strlen(s);
-		ptr = ft_strnew(i);
-		if (!ptr)
-			return (NULL);
-		i = 0;
-		while (s[i])
-		{
-			ptr[i] = f(s[i]);
-			i++;
-		}
+		nbr = nbr / 10;
+		i++;
 	}
-	return (ptr);
+	return (i);
 }

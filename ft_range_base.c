@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_range_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 10:06:46 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/10 10:22:16 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/10 10:25:32 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/10 10:44:43 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+int		ft_range_base(unsigned int nbr, unsigned int base)
 {
-	size_t	i;
-	char	*ptr;
+	int range;
 
-	ptr = NULL;
-	if (s && f)
+	range = 1;
+	while (nbr >= (base))
 	{
-		i = ft_strlen(s);
-		ptr = ft_strnew(i);
-		if (!ptr)
-			return (NULL);
-		i = 0;
-		while (s[i])
-		{
-			ptr[i] = f(s[i]);
-			i++;
-		}
+		range = range * base;
+		nbr = nbr / base;
 	}
-	return (ptr);
+	return (range);
 }

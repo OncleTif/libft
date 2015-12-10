@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 12:48:41 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/10 10:42:23 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/10 10:40:43 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/10 10:45:33 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_uitoaa(unsigned int nbr, char *ptr)
+void	ft_uitoaa_base(unsigned int nbr, char *ptr, unsigned int base)
 {
 	int				i;
 	size_t			range;
+	int				digit;
 
 	i = 0;
-	range = ft_range(nbr);
+	range = ft_range_base(nbr, base);
 	while (range)
 	{
-		ptr[i] = nbr / range + '0';
+		digit = nbr / range;
+		if (digit < 10)
+			ptr[i] = digit + '0';
+		else
+			ptr[i] = digit + 'A' - 10;
 		nbr = nbr % range;
-		range = range / 10;
+		range = range / base;
 		i++;
 	}
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa_base(int n, unsigned int base)
 {
 	int				neg;
 	unsigned int	nbr;
@@ -41,7 +46,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		neg = -1;
 	nbr = n * neg;
-	size = ft_intsize(nbr);
+	size = ft_intsize_base(nbr, base);
 	ptr = ft_strnew(size + (neg == -1));
 	if (!ptr)
 		return (NULL);
@@ -50,6 +55,6 @@ char	*ft_itoa(int n)
 		ptr[i] = '-';
 		i++;
 	}
-	ft_uitoaa(nbr, ptr + i);
+	ft_uitoaa_base(nbr, ptr + i, base);
 	return (ptr);
 }

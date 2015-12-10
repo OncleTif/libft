@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 15:18:31 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/30 15:27:43 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/10 10:04:09 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ char	*ft_strnew(size_t size)
 {
 	char	*newstr;
 
-	newstr = (char*)ft_memalloc(size);
+	newstr = (char*)ft_memalloc((size + 1) * sizeof(char));
 	return (newstr);
 }

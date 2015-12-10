@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2015/12/07 16:46:53 by tmanet           ###   ########.fr        #
+#    Updated: 2015/12/10 10:43:34 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strstr.c ft_tolower.c \
 	  ft_toupper.c ft_strmap.c ft_strmapi.c ft_strsub.c ft_strjoin.c \
 	  ft_strtrim.c ft_strsplit.c ft_itoa.c ft_lstnew.c ft_lstdelone.c \
-	  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_range.c
+	  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_range.c \
+	  ft_range_base.c ft_itoa_base.c ft_intsize.c ft_intsize_base.c
 
 OBJ = $(SRC:.c=.o)
 
