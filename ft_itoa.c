@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 12:48:41 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/10 10:42:23 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/10 15:40:25 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_uitoaa(unsigned int nbr, char *ptr)
+static void	ft_uitoaa(unsigned int nbr, char *ptr)
 {
 	int				i;
 	size_t			range;
@@ -28,7 +28,7 @@ void	ft_uitoaa(unsigned int nbr, char *ptr)
 	}
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int				neg;
 	unsigned int	nbr;

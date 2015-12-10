@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 13:59:57 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/07 15:23:39 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/10 16:32:11 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wordcount(char const *s, char c)
+static size_t	ft_wordcount(char const *s, char c)
 {
 	int		in_word;
 	size_t	n_word;
@@ -36,7 +36,7 @@ size_t	ft_wordcount(char const *s, char c)
 	return (n_word);
 }
 
-char	*ft_wordpicker(char *str, char **ptr, char c)
+static char		*ft_wordpicker(char *str, char **ptr, char c)
 {
 	size_t	word_begin;
 	size_t	word_end;
@@ -54,7 +54,7 @@ char	*ft_wordpicker(char *str, char **ptr, char c)
 	return (str + word_end);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	size_t	n_word;
 	char	**ptr;
