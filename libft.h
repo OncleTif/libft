@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/10 15:41:12 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/11 17:46:26 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_intsize(unsigned int nbr);
 int					ft_intsize_base(unsigned int nbr, unsigned int base);
+void				ft_putstr_lst(t_list *elem);
+t_list				*ft_strsplit_lst(char const *str, char c);
 #endif

@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2015/12/11 12:50:30 by tmanet           ###   ########.fr        #
+#    Updated: 2015/12/11 17:47:10 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRC =   ft_atoi.c \
 		ft_putnbr_fd.c \
 		ft_putstr.c \
 		ft_putstr_fd.c \
+		ft_putstr_lst.c \
 		ft_range.c \
 		ft_range_base.c \
 		ft_strcat.c \
@@ -74,6 +75,7 @@ SRC =   ft_atoi.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
 		ft_strsplit.c \
+		ft_strsplit_lst.c \
 		ft_strstr.c \
 		ft_strsub.c \
 		ft_strtrim.c \
