@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbrendl_fd.c                                 :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 17:07:30 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/18 17:18:40 by tmanet           ###   ########.fr       */
+/*   Created: 2015/12/18 17:14:27 by tmanet            #+#    #+#             */
+/*   Updated: 2015/12/18 17:16:30 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbrendl_fd(int nbr, int fd)
+int	ft_pow(int nbr)
 {
-	ft_putnbr_fd(nbr, fd);
-	ft_putchar_fd('\n', fd);
+	int	i;
+	int	out;
+
+	i = 0;
+	out = 1;
+	while (i < nbr)
+	{
+		out = out * nbr;
+		i++;
+	}
+	return (out);
 }
