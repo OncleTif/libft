@@ -6,20 +6,20 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/18 17:14:27 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/18 17:16:30 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/18 17:36:06 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_pow(int nbr)
+int	ft_pow(int nbr, int pwr)
 {
 	int	i;
 	int	out;
 
 	i = 0;
 	out = 1;
-	while (i < nbr)
+	while (i < pwr)
 	{
 		out = out * nbr;
 		i++;
