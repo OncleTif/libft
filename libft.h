@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/11 17:46:26 by tmanet           ###   ########.fr       */
+/*   Updated: 2015/12/18 17:13:36 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr(int n);
+void				ft_putnbrendl_fd(int n, int fd);
+void				ft_putnbrendl(int n);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_range(unsigned int nbr);

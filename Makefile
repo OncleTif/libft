@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2015/12/11 17:47:10 by tmanet           ###   ########.fr        #
+#    Updated: 2015/12/18 17:12:55 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,8 @@ SRC =   ft_atoi.c \
 		ft_putendl_fd.c \
 		ft_putnbr.c \
 		ft_putnbr_fd.c \
+		ft_putnbrendl.c \
+		ft_putnbrendl_fd.c \
 		ft_putstr.c \
 		ft_putstr_fd.c \
 		ft_putstr_lst.c \
