@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/18 17:36:26 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/07 12:09:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
+void				ft_putnstr(void const *s, size_t size);
 void				*ft_memalloc(size_t size);
 char				*ft_strnew(size_t size);
 void				ft_bzero(void *s, size_t n);
