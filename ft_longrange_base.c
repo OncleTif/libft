@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/20 17:27:47 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/20 17:28:25 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/20 17:50:52 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ long		ft_longrange_base(unsigned long nbr, unsigned int base)
 	long range;
 
 	range = 1;
-	while (nbr >= (base))
+	while (nbr >= (unsigned long)base)
 	{
-		range = range * base;
-		nbr = nbr / base;
+		range = range * (unsigned long)base;
+		nbr = nbr / (unsigned long)base;
 	}
 	return (range);
 }
