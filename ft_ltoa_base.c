@@ -12,27 +12,6 @@
 
 #include "libft.h"
 
-static void	ft_ultoaa_base(unsigned long nbr, char *ptr, unsigned int base)
-{
-	int				i;
-	long			range;
-	long			digit;
-
-	i = 0;
-	range = ft_longrange_base(nbr, base);
-	while (range)
-	{
-		digit = nbr / range;
-		if (digit < 10)
-			ptr[i] = digit + '0';
-		else
-			ptr[i] = digit + 'A' - 10;
-		nbr = nbr % range;
-		range = range / base;
-		i++;
-	}
-}
-
 char		*ft_ltoa_base(long n, unsigned int base)
 {
 	int				neg;
