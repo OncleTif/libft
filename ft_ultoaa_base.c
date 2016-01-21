@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultoa_base.c                                    :+:      :+:    :+:   */
+/*   ft_ultoaa_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/20 17:27:16 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/21 19:01:14 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/21 18:58:49 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/21 18:59:20 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_ultoa_base(unsigned long nbr, unsigned int base, char c)
+void	ft_ultoaa_base(unsigned long nbr, char *ptr, unsigned int base, char c)
 {
-	size_t			size;
-	char			*ptr;
+	int				i;
+	size_t			range;
+	int				digit;
 
-	size = ft_longsize_base(nbr, base);
-	ptr = ft_strnew(size);
-	if (!ptr)
-		return (NULL);
-	ft_ultoaa_base(nbr, ptr, base, c);
-	return (ptr);
+	i = 0;
+	range = ft_longrange_base(nbr, base);
+	while (range)
+	{
+		digit = nbr / range;
+		if (digit < 10)
+			ptr[i] = digit + '0';
+		else
+			ptr[i] = digit + c - 10;
+		nbr = nbr % range;
+		range = range / base;
+		i++;
+	}
 }

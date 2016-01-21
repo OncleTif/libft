@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/20 17:33:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/21 19:01:12 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,9 @@ char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, unsigned int base);
 char				*ft_ltoa_base(long n, unsigned int base);
-char				*ft_uitoa_base(unsigned int n, unsigned int base,char c);
-char				*ft_ultoa_base(unsigned long n, unsigned int base,char c);
+char				*ft_uitoa_base(unsigned int n, unsigned int base, char c);
+char				*ft_ultoa_base(unsigned long n, unsigned int base, char c);
+char				*ft_ultoaa_base(unsigned long n, char *ptr, unsigned int base, char c);
 void				ft_putendl(char const *s);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
