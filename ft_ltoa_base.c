@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/20 17:31:01 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/20 17:48:24 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/21 13:59:49 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	ft_ultoaa_base(unsigned long nbr, char *ptr, unsigned int base)
 char		*ft_ltoa_base(long n, unsigned int base)
 {
 	int				neg;
-	unsigned int	nbr;
+	unsigned long	nbr;
 	size_t			size;
 	char			*ptr;
 	int				i;
