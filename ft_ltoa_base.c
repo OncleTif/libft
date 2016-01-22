@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/20 17:31:01 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/21 13:59:49 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/22 12:04:23 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ char		*ft_ltoa_base(long n, unsigned int base)
 		ptr[i] = '-';
 		i++;
 	}
-	ft_ultoaa_base(nbr, ptr + i, base);
+	ft_ultoaa_base(nbr, ptr + i, base, 'a');
 	return (ptr);
 }

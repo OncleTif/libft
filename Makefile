@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/20 17:37:38 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/22 12:05:13 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,8 @@ SRC =   ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 		ft_uitoa_base.c \
-		ft_ultoa_base.c
+		ft_ultoa_base.c \
+		ft_ultoaa_base.c
 
 OBJ = $(SRC:.c=.o)
 
