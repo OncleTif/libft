@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/22 12:09:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/25 12:44:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_range(unsigned int nbr);
 int					ft_range_base(unsigned int nbr, unsigned int base);
+unsigned long long	ft_longlongrange_base(unsigned long long nbr,
+		unsigned int base);
 long				ft_longrange_base(unsigned long nbr, unsigned int base);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
@@ -85,10 +87,15 @@ char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, unsigned int base);
 char				*ft_ltoa_base(long n, unsigned int base);
+char				*ft_lltoa_base(long long n, unsigned int base);
 char				*ft_uitoa_base(unsigned int n, unsigned int base, char c);
 char				*ft_ultoa_base(unsigned long n, unsigned int base, char c);
-void				ft_ultoaa_base(unsigned long n, char *ptr,
+char				*ft_ulltoa_base(unsigned long long n,
 		unsigned int base, char c);
+void				ft_ultoaa_base(unsigned long n, char *ptr,
+	unsigned int base, char c);
+void				ft_ulltoaa_base(unsigned long long n, char *ptr,
+	unsigned int base, char c);
 void				ft_putendl(char const *s);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
@@ -99,6 +106,8 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_intsize(unsigned int nbr);
 int					ft_intsize_base(unsigned int nbr, unsigned int base);
 int					ft_longsize_base(unsigned long nbr, unsigned int base);
+size_t				ft_longlongsize_base(unsigned long long nbr,
+		unsigned int base);
 void				ft_putstr_lst(t_list *elem);
 t_list				*ft_strsplit_lst(char const *str, char c);
 #endif

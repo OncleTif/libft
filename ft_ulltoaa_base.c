@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_ulltoaa_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/10 10:40:43 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/25 12:43:28 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/25 12:08:05 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/25 12:42:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_uitoaa_base(unsigned int nbr,
+void	ft_ulltoaa_base(unsigned long long nbr,
 		char *ptr, unsigned int base, char c)
 {
-	int				i;
-	size_t			range;
-	int				digit;
+	int					i;
+	unsigned long long	range;
+	int					digit;
 
 	i = 0;
-	range = ft_range_base(nbr, base);
+	range = ft_longlongrange_base(nbr, base);
 	while (range)
 	{
 		digit = nbr / range;
@@ -32,19 +32,4 @@ static void	ft_uitoaa_base(unsigned int nbr,
 		range = range / base;
 		i++;
 	}
-}
-
-char		*ft_uitoa_base(unsigned int nbr, unsigned int base, char c)
-{
-	size_t			size;
-	char			*ptr;
-	int				i;
-
-	i = 0;
-	size = ft_intsize_base(nbr, base);
-	ptr = ft_strnew(size);
-	if (!ptr)
-		return (NULL);
-	ft_uitoaa_base(nbr, ptr + i, base, c);
-	return (ptr);
 }

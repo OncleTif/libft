@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/22 12:05:13 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/25 12:40:48 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,9 @@ SRC =   ft_atoi.c \
 		ft_isprint.c \
 		ft_itoa.c \
 		ft_itoa_base.c \
+		ft_lltoa_base.c \
+		ft_longlongrange_base.c \
+		ft_longlongsize_base.c \
 		ft_longrange_base.c \
 		ft_longsize_base.c \
 		ft_lstadd.c \
@@ -89,7 +92,9 @@ SRC =   ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 		ft_uitoa_base.c \
+		ft_ulltoa_base.c \
 		ft_ultoa_base.c \
+		ft_ulltoaa_base.c \
 		ft_ultoaa_base.c
 
 OBJ = $(SRC:.c=.o)
