@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 15:27:27 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 15:28:26 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 16:07:27 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 
 void	ft_putnchar(char *str, size_t size)
 {
-	size_t i;
 	size_t j;
 
-	i = 0;
 	j = 0;
 	while (j < size)
 	{
-		ft_putchar(str[i]);
-		if (str[i])
-			i++;
+		ft_putchar(str[j]);
 		j++;
 	}
 }
