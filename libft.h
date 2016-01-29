@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 15:29:18 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 11:13:52 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin_clean(char *s1, char *s2);
 char				*ft_strtrim(char const *s);
 size_t				ft_next_word(char const *s2, char c);
 char				**ft_strsplit(char const *s, char c);
