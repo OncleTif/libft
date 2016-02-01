@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/29 11:13:52 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/01 12:35:57 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <errno.h>
+# define BUFF_SIZE 4
 
 typedef struct		s_list
 {
@@ -24,7 +25,16 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct			s_file_mem
+{
+	int					fd;
+	int					eof;
+	t_list				*lst;
+	struct s_file_mem	*next;
+}						t_file_mem;
+
 void				ft_putchar_fd(char c, int fd);
+int					get_next_line(int const fd, char **line);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putchar(char c);
