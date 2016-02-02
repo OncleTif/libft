@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/02 11:17:21 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/02 11:35:56 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/02 15:43:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_atoui(char *str)
+unsigned int	ft_atoui_base(char *str)
 {
 	unsigned int	nbr;
 	int				i;
