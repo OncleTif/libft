@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/01 12:35:57 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/02 10:39:18 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <errno.h>
 # define BUFF_SIZE 4
+# define DEBUG 1
 
 typedef struct		s_list
 {
@@ -33,6 +34,7 @@ typedef struct			s_file_mem
 	struct s_file_mem	*next;
 }						t_file_mem;
 
+void				ft_error(char *str);
 void				ft_putchar_fd(char c, int fd);
 int					get_next_line(int const fd, char **line);
 void				ft_putstr_fd(char const *s, int fd);
