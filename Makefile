@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/02 11:37:22 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/02 14:38:41 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC =   ft_atoi.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
+		ft_lstpush_back.c \
 		ft_ltoa_base.c \
 		ft_memalloc.c \
 		ft_memccpy.c \
