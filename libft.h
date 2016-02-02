@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/02 10:39:18 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/02 10:42:42 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct			s_file_mem
+typedef struct		s_file_mem
 {
 	int					fd;
 	int					eof;
 	t_list				*lst;
 	struct s_file_mem	*next;
-}						t_file_mem;
+}					t_file_mem;
 
 void				ft_error(char *str);
 void				ft_putchar_fd(char c, int fd);
