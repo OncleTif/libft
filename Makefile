@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/02 10:39:58 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/02 11:37:22 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ CC = gcc
 FLAGS = -c -Wall -Wextra -Werror
 
 SRC =   ft_atoi.c \
+		ft_atoui_base.c \
 		ft_bzero.c \
 		ft_error.c \
 		ft_intsize.c \

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/02 10:42:42 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/02 11:36:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void				ft_strdel(char **as);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);
+unsigned int		ft_atoui_base(char *str);
 int					ft_isprint(int c);
 int					ft_isascii(int c);
 int					ft_isalpha(int c);
