@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/02 10:33:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/02 10:38:11 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/08 16:47:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_error(char *str)
 		ft_putendl(str);
 	else
 		ft_putendl("error");
-	exit(0 * (int)str);
+	exit(0);
 }
