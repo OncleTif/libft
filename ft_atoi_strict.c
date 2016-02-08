@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpush_back.c                                  :+:      :+:    :+:   */
+/*   ft_atoi_strict.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/02 14:24:23 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/08 16:43:54 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/08 16:30:05 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/08 16:40:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstpush_back(t_list **alst, t_list *new)
+int	ft_atoi_strict(const char *str)
 {
-	t_list	*elem;
+	int		i;
+	long	nbr;
+	int		neg;
 
-	if (alst && new)
+	i = 0;
+	nbr = 0;
+	neg = 1;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
 	{
-		elem = *alst;
-		if (elem)
-		{
-			while (elem->next)
-				elem = elem->next;
-			elem->next = new;
-		}
-		else
-			*alst = new;
+		neg = -1;
+		i++;
 	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] && ft_isdigit(str[i]))
+	{
+		nbr = nbr * 10 + (str[i] - '0');
+		i++;
+	}
+	if (str[i] || nbr > INT_MAX || nbr < INT_MIN)
+		ft_error("invalid input in atoi_strict");
+	return ((int)nbr * neg);
 }

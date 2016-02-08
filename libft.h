@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/02 14:38:23 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/08 16:42:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <errno.h>
+# include <limits.h>
 # define BUFF_SIZE 4
 # define DEBUG 1
 
@@ -60,6 +61,7 @@ void				ft_strdel(char **as);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);
+int					ft_atoi_strict(const char *str);
 unsigned int		ft_atoui_base(char *str);
 int					ft_isprint(int c);
 int					ft_isascii(int c);
