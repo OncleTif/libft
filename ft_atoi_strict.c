@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 16:30:05 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/08 16:40:53 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/10 17:34:12 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,11 @@ int	ft_atoi_strict(const char *str)
 	while (str[i] && ft_isdigit(str[i]))
 	{
 		nbr = nbr * 10 + (str[i] - '0');
+		if (nbr > INT_MAX || nbr < INT_MIN)
+			ft_error("invalid input in atoi_strict");
 		i++;
 	}
-	if (str[i] || nbr > INT_MAX || nbr < INT_MIN)
+	if (str[i])
 		ft_error("invalid input in atoi_strict");
 	return ((int)nbr * neg);
 }
