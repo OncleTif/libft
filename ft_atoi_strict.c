@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 16:30:05 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/10 17:34:12 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/19 10:31:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,8 @@ int	ft_atoi_strict(const char *str)
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-')
-	{
 		neg = -1;
-		i++;
-	}
-	else if (str[i] == '+')
+	if (str[i] == '+' || str[i] == '-')
 		i++;
 	while (str[i] && ft_isdigit(str[i]))
 	{

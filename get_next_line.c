@@ -6,11 +6,11 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/28 10:47:35 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/22 10:43:05 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/11 16:59:58 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static t_file_mem	*ft_newfmem(int const fd, t_file_mem **fmem)
 {
