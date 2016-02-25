@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/08 16:42:34 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/25 18:59:52 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,3 +128,6 @@ fclean: clean
 	@echo "suppression de $(NAME)"
 
 re: fclean all
+
+norme:
+	@norminette $(SRC) libft.h
