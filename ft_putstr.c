@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:52:45 by tmanet            #+#    #+#             */
-/*   Updated: 2015/11/30 13:53:21 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/02/02 11:29:31 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr(char const *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	ft_putstr_fd(str, 1);
 }
