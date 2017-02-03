@@ -79,6 +79,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 int					ft_pow(int n, int pwr);
+void				ft_putaddr_fd(void* n, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_base_fd(int n, int base, int fd);
 void				ft_putnbr(int n);
@@ -89,6 +90,7 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_range(unsigned int nbr);
 int					ft_range_base(unsigned int nbr, unsigned int base);
+int					ft_rangelong_base(unsigned long nbr, unsigned int base);
 unsigned long long	ft_longlongrange_base(unsigned long long nbr,
 		unsigned int base);
 long				ft_longrange_base(unsigned long nbr, unsigned int base);
