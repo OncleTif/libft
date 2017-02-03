@@ -57,7 +57,9 @@ SRC =   ft_atoi.c \
 		ft_putendl.c \
 		ft_putendl_fd.c \
 		ft_putnbr.c \
+		ft_putnbr_base.c \
 		ft_putnbr_fd.c \
+		ft_putnbr_base_fd.c \
 		ft_putnbrendl.c \
 		ft_putnbrendl_fd.c \
 		ft_putnchar.c \
