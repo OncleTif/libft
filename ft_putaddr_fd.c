@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 09:41:37 by tmanet            #+#    #+#             */
-/*   Updated: 2015/12/07 16:46:13 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/02/06 11:29:59 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ static void	putnbrchar(char c, int fd)
 		ft_putchar_fd(c + 'A' - 10, fd);
 }
 
-void	ft_putaddr_fd(void *n, int fd)
+void		ft_putaddr_fd(void *n, int fd)
 {
 	unsigned long	buf;
 	int				range;
 
-		buf = (unsigned long)n;
+	buf = (unsigned long)n;
 	range = ft_range_base(buf, 16);
 	while (range)
 	{
