@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
+/*   ft_putaddr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 09:41:37 by tmanet            #+#    #+#             */
-/*   Updated: 2017/02/06 11:29:59 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/02/06 14:22:49 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	putnbrchar(char c, int fd)
+static void	ft_putnbrchar(char c, int fd)
 {
 	if (c < 10)
 		ft_putchar_fd(c + '0', fd);
@@ -23,13 +23,13 @@ static void	putnbrchar(char c, int fd)
 void		ft_putaddr_fd(void *n, int fd)
 {
 	unsigned long	buf;
-	int				range;
+	unsigned long	range;
 
 	buf = (unsigned long)n;
-	range = ft_range_base(buf, 16);
-	while (range)
+	range = ft_rangelong_base(buf, 16);
+	while (range != 0)
 	{
-		putnbrchar(buf / range, fd);
+		ft_putnbrchar(buf / range, fd);
 		buf = buf % range;
 		range = range / 16;
 	}

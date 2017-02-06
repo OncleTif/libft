@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/02/06 11:33:01 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/02/06 14:05:13 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_range(unsigned int nbr);
 int					ft_range_base(unsigned int nbr, unsigned int base);
-int					ft_rangelong_base(unsigned long nbr, unsigned int base);
+unsigned long		ft_rangelong_base(unsigned long nbr, unsigned int base);
 unsigned long long	ft_longlongrange_base(unsigned long long nbr,
 		unsigned int base);
 long				ft_longrange_base(unsigned long nbr, unsigned int base);
