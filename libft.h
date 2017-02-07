@@ -79,6 +79,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 int					ft_pow(int n, int pwr);
+void				ft_putaddr(void *n);
 void				ft_putaddr_fd(void *n, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_base_fd(int n, int base, int fd);

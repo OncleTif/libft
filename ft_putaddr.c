@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putaddr_fd.c                                :+:      :+:    :+:   */
+/*   ft_putaddr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,27 +12,7 @@
 
 #include "libft.h"
 
-static void	ft_putnbrchar(char c, int fd)
+void		ft_putaddr(void *n)
 {
-	if (c < 10)
-		ft_putchar_fd(c + '0', fd);
-	else
-		ft_putchar_fd(c + 'A' - 10, fd);
-}
-
-void		ft_putaddr_fd(void *n, int fd)
-{
-	unsigned long	buf;
-	unsigned long	range;
-
-	buf = (unsigned long)n;
-	range = ft_rangelong_base(buf, 16);
-	if (buf)
-		ft_putstr_fd("0x", fd);
-	while (range != 0)
-	{
-		ft_putnbrchar(buf / range, fd);
-		buf = buf % range;
-		range = range / 16;
-	}
+	ft_putaddr_fd(n, 1);
 }
