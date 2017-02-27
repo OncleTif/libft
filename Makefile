@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/25 18:59:52 by tmanet           ###   ########.fr        #
+#    Updated: 2017/02/27 14:44:44 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,6 +95,7 @@ SRC =   ft_atoi.c \
 		ft_strnew.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
+		ft_strsort.c \
 		ft_strsplit.c \
 		ft_strsplit_lst.c \
 		ft_strstr.c \

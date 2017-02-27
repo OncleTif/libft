@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/02/06 14:05:13 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/02/27 14:47:46 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
+void				ft_strsort(char **tab, int size);
 int					ft_pow(int n, int pwr);
 void				ft_putaddr(void *n);
 void				ft_putaddr_fd(void *n, int fd);
