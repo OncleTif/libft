@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/08 11:14:45 by tmanet            #+#    #+#             */
-/*   Updated: 2017/03/01 15:10:42 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/03/01 17:21:51 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void		ft_putaddr_fd(void *n, int fd)
 	buf = (unsigned long)n;
 	range = ft_rangelong_base(buf, 16);
 	frange = UINT64_MAX;
-	while (range < frange)
+	while (range <= frange / 16)
 	{
 		ft_putnbrchar(0, fd);
 		frange = frange / 16;

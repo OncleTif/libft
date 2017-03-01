@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memsort.c                                       :+:      :+:    :+:   */
+/*   ft_ptrarray.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 15:41:19 by tmanet            #+#    #+#             */
-/*   Updated: 2017/03/01 17:13:59 by tmanet           ###   ########.fr       */
+/*   Created: 2017/03/01 16:38:14 by tmanet            #+#    #+#             */
+/*   Updated: 2017/03/01 16:44:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memsort(void **tab, int size, int (*f)(void *, void *))
+void	**ft_ptrarray(void *arr, size_t nbr, size_t size)
 {
-	int		i;
-	int		sorted;
-	void	*buf;
+	void	**ptr;
+	size_t	i;
 
-	sorted = 0;
-	while (!sorted)
+	ptr = (void**)ft_memalloc(nbr * sizeof(*ptr));
+	if (!ptr)
+		return (ptr);
+	i = 0;
+	while (i < nbr)
 	{
-		i = 1;
-		sorted = 1;
-		while (i < size)
-		{
-			if (f(tab[i - 1], tab[i]) > 0)
-			{
-				sorted = 0;
-				buf = tab[i];
-				tab[i] = tab[i - 1];
-				tab[i - 1] = buf;
-			}
-			i++;
-		}
+		ptr[i] = arr + (i * size);
+		i++;
 	}
+	return (ptr);
 }
