@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdint.h>
 # include <string.h>
 # include <errno.h>
 # include <limits.h>
