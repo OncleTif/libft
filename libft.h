@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/03/01 16:54:09 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/03/13 17:39:59 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,9 @@ void				ft_strsort(char **tab, int size);
 int					ft_pow(int n, int pwr);
 void				**ft_ptrarray(void *arr, size_t nbr, size_t size);
 void				ft_putaddr(void *n);
+void				ft_putnaddr(void *n, int size);
 void				ft_putaddr_fd(void *n, int fd);
+void				ft_putnaddr_fd(void *n, int fd, int size);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_base_fd(int n, int base, int fd);
 void				ft_putnbr(int n);
@@ -93,6 +95,7 @@ void				ft_putnbrendl(int n);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_range(unsigned int nbr);
+unsigned long		ft_rangelength(int size, unsigned int base);
 int					ft_range_base(unsigned int nbr, unsigned int base);
 unsigned long		ft_rangelong_base(unsigned long nbr, unsigned int base);
 unsigned long long	ft_longlongrange_base(unsigned long long nbr,
