@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/03/14 18:10:50 by tmanet           ###   ########.fr        #
+#    Updated: 2017/03/31 14:13:36 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC =   ft_atoi.c \
 		ft_atoi_strict.c \
 		ft_atoui_base.c \
 		ft_bzero.c \
+		ft_ctop.c \
 		ft_error.c \
 		ft_intsize.c \
 		ft_intsize_base.c \
@@ -55,6 +56,8 @@ SRC =   ft_atoi.c \
 		ft_memsort.c \
 		ft_pow.c \
 		ft_ptrarray.c \
+		ft_printchar.c \
+		ft_printchar_fd.c \
 		ft_putaddr.c \
 		ft_putnaddr.c \
 		ft_putaddr_fd.c \

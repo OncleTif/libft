@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/03/14 18:11:31 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/03/31 14:13:11 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct		s_file_mem
 	struct s_file_mem	*next;
 }					t_file_mem;
 
+char				ft_ctop(char c);
 void				ft_error(char *str);
 void				ft_putchar_fd(char c, int fd);
 int					get_next_line(int const fd, char **line);
@@ -83,6 +84,8 @@ char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 void				ft_strsort(char **tab, int size);
 int					ft_pow(int n, int pwr);
 void				**ft_ptrarray(void *arr, size_t nbr, size_t size);
+void				ft_printchar(char n);
+void				ft_printchar_fd(char n, int fd);
 void				ft_putaddr(void *n);
 void				ft_putnaddr(void *n, int size);
 void				ft_putaddr_fd(void *n, int fd);

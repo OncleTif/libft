@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uint32_reverse.c                                :+:      :+:    :+:   */
+/*   ft_printchar_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/14 15:10:30 by tmanet            #+#    #+#             */
-/*   Updated: 2017/03/31 13:37:18 by tmanet           ###   ########.fr       */
+/*   Created: 2017/03/31 13:31:28 by tmanet            #+#    #+#             */
+/*   Updated: 2017/03/31 14:15:42 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-uint32_t	ft_uint32_reverse(uint32_t num)
+void	ft_printchar_fd(char c, int fd)
 {
-	return (((num & 0xff000000) >> 24) |
-			((num & 0x00ff0000) >> 8) |
-			((num & 0x0000ff00) << 8) |
-			(num << 24));
+		ft_putchar_fd(ft_ctop((unsigned char)c / 16), fd);
+		ft_putchar_fd(ft_ctop((unsigned char)c % 16), fd);
 }
