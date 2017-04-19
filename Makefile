@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/03/31 14:13:36 by tmanet           ###   ########.fr        #
+#    Updated: 2017/04/19 17:10:48 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -140,8 +140,7 @@ clean:
 	@echo "suppression des objets"
 
 fclean: clean
-	@rm -rf $(NAME)
-	@echo "suppression de $(NAME)"
+	@rm -rf $(NAME) && echo "suppression de $(NAME)"
 
 re: fclean all
 
