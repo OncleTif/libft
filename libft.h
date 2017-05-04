@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/03/31 14:13:11 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/05/03 16:43:16 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *s1, const char *s2, size_t n);
 char				*ft_strdup(const char *s1);
+char				*ft_strndup(const char *s1, int size);
 void				ft_memdel(void **ap);
 void				ft_strdel(char **as);
 int					ft_toupper(int c);
