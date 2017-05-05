@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/05/03 16:43:16 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/05/05 15:55:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,4 +146,5 @@ void				ft_putstr_lst(t_list *elem);
 t_list				*ft_strsplit_lst(char const *str, char c);
 uint32_t			ft_uint32_reverse(uint32_t	nbr);
 void				ft_memrev(char *buf, size_t count);
+void				ft_lstdelstr(void *as, size_t size);
 #endif

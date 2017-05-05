@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/05/04 10:06:28 by tmanet           ###   ########.fr        #
+#    Updated: 2017/05/05 15:15:56 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRC =   ft_atoi.c \
 		ft_lstadd.c \
 		ft_lstdel.c \
 		ft_lstdelone.c \
+		ft_lstdelstr.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
