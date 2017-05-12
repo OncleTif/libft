@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/05/10 14:48:48 by tmanet           ###   ########.fr        #
+#    Updated: 2017/05/12 13:58:32 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,6 +89,7 @@ SRC =   ft_atoi.c \
 		ft_strchr.c \
 		ft_strclr.c \
 		ft_strcmp.c \
+		ft_strcmpadapter.c \
 		ft_strcpy.c \
 		ft_strdel.c \
 		ft_strdup.c \
