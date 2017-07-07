@@ -101,6 +101,7 @@ SRC =   ft_atoi.c \
 		ft_strjoin_clean.c \
 		ft_strlcat.c \
 		ft_strlen.c \
+		ft_strltrim.c \
 		ft_strmap.c \
 		ft_strmapi.c \
 		ft_strncat.c \
