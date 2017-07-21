@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/05/12 14:00:15 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/07/21 11:26:43 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ char				*ft_strdup(const char *s1);
 char				*ft_strndup(const char *s1, int size);
 void				ft_memdel(void **ap);
 void				ft_strdel(char **as);
+void				ft_arraystrdel(char ***pas);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);

@@ -6,7 +6,5 @@ char	*ft_strltrim(char *str)
 		return (NULL);
 	while (*str && *str == ' ')
 		str++;
-	if (*str)
-		return (str);
-	return (NULL);
+	return (str);
 }
