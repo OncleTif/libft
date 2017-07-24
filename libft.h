@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/07/21 11:26:43 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/07/24 17:19:47 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strcmpadapter(void *s1, void *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
+int					ft_strequ_sep(char const *s1, char const *s2, char const c);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);

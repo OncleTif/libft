@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/07/21 11:27:58 by tmanet           ###   ########.fr        #
+#    Updated: 2017/07/24 17:20:22 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,7 @@ SRC = ft_arraystrdel.c \
 	  ft_strdup.c \
 	  ft_strndup.c \
 	  ft_strequ.c \
+	  ft_strequ_sep.c \
 	  ft_striter.c \
 	  ft_striteri.c \
 	  ft_strjoin.c \
