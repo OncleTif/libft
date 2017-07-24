@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/07/24 17:19:47 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/07/24 17:51:23 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ int					ft_isalpha(int c);
 int					ft_isalnum(int c);
 int					ft_isdigit(int c);
 size_t				ft_strlen(const char *s);
+size_t				ft_strlen_sep(const char *s, const char c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strcmpadapter(void *s1, void *s2);
