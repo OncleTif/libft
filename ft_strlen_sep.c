@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arraystrdel.c                                   :+:      :+:    :+:   */
+/*   ft_strlen_sep.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/21 11:20:14 by tmanet            #+#    #+#             */
-/*   Updated: 2017/07/24 20:33:18 by tmanet           ###   ########.fr       */
+/*   Created: 2017/07/24 17:50:38 by tmanet            #+#    #+#             */
+/*   Updated: 2017/07/24 17:50:41 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_arraystrdel(char ***pas)
+size_t	ft_strlen_sep(const char *s, const char c)
 {
-	int		i;
-	char	**as;
+	size_t	length;
 
-	as = *pas;
-	if (as)
+	length = 0;
+	while (s[length] && s[length] != c)
 	{
-		i = 0;
-		while (as[i])
-		{
-			ft_strdel(as + i);
-			i++;
-		}
-		ft_memdel((void**)pas);
+		length++;
 	}
+	return (length);
 }
