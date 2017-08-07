@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/07/24 17:51:23 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/08/07 10:31:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *s1, const char *s2, size_t n);
 char				*ft_strdup(const char *s1);
+char				*ft_strdup_sep(const char *s1, char sep);
 char				*ft_strndup(const char *s1, int size);
 void				ft_memdel(void **ap);
 void				ft_strdel(char **as);
@@ -155,4 +156,5 @@ void				ft_lstdelstr(void *as, size_t size);
 void				ft_lstswap(t_list **head);
 void				ft_lstsort(t_list **head, int (*f)(t_list *, t_list *));
 void				ft_lstsortrev(t_list **head, int (*f)(t_list *, t_list *));
+char				*get_substr_sep(const char *str, int pos, char sep);
 #endif

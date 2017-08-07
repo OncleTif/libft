@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/07/24 17:51:44 by tmanet           ###   ########.fr        #
+#    Updated: 2017/08/07 10:51:59 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ SRC = ft_arraystrdel.c \
 	  ft_strcpy.c \
 	  ft_strdel.c \
 	  ft_strdup.c \
+	  ft_strdup_sep.c \
 	  ft_strndup.c \
 	  ft_strequ.c \
 	  ft_strequ_sep.c \
@@ -129,6 +130,7 @@ SRC = ft_arraystrdel.c \
 	  ft_ulltoaa_base.c \
 	  ft_ultoaa_base.c \
 	  get_next_line.c \
+	  get_substr_sep.c \
 	  ft_printf.c \
 	  ft_param_builder.c \
 	  ft_conv_lister.c \
