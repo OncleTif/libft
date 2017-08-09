@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/08/07 10:31:53 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/08/09 14:31:33 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strjoin_clean(char *s1, char *s2);
 char				*ft_strtrim(char const *s);
+char				*ft_strtrim_cr(char *s);
 char				*ft_strltrim(char *s);
 size_t				ft_next_word(char const *s2, char c);
 char				**ft_strsplit(char const *s, char c);

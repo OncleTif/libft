@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/08/07 10:51:59 by tmanet           ###   ########.fr        #
+#    Updated: 2017/08/09 14:29:59 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -121,6 +121,7 @@ SRC = ft_arraystrdel.c \
 	  ft_strstr.c \
 	  ft_strsub.c \
 	  ft_strtrim.c \
+	  ft_strtrim_cr.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 	  ft_uitoa_base.c \
