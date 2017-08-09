@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2017/05/04 10:07:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/08/09 17:51:06 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct		s_param
 }					t_param;
 
 int					ft_printf(char *str, ...);
+int					ft_dprintf(int fd, char *str, ...);
 int					ft_param_size(char *str, t_list *conv);
 t_flag				*ft_flag_lister();
 t_flag				*ft_newflag(t_flag *nxt, char *ptn,

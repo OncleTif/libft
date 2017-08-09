@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/08/09 14:29:59 by tmanet           ###   ########.fr        #
+#    Updated: 2017/08/09 17:50:20 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -133,6 +133,7 @@ SRC = ft_arraystrdel.c \
 	  get_next_line.c \
 	  get_substr_sep.c \
 	  ft_printf.c \
+	  ft_dprintf.c \
 	  ft_param_builder.c \
 	  ft_conv_lister.c \
 	  ft_flag_lister.c \
