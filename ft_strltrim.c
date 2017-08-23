@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/19 11:35:53 by tmanet            #+#    #+#             */
-/*   Updated: 2017/07/19 11:35:55 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/08/23 14:41:11 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strltrim(char *str)
 {
 	if (!str)
 		return (NULL);
-	while (*str && *str == ' ')
+	while (*str && (*str == ' ' || *str == '\t'))
 		str++;
 	return (str);
 }
