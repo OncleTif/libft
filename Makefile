@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/08/10 16:18:56 by tmanet           ###   ########.fr        #
+#    Updated: 2017/10/06 18:46:59 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -186,7 +186,8 @@ SRC = ft_arraystrdel.c \
 	  ft_conv_upu.c \
 	  ft_conv_upx.c \
 	  ft_conv_p.c \
-	  ft_conv_percent.c
+	  ft_conv_percent.c \
+	  last_char.c
 
 OBJ = $(SRC:.c=.o)
 
