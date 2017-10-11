@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/11 11:41:24 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/11 12:00:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ typedef struct		s_lst
 typedef struct		s_dlst
 {
 	void			*cnt;
-	struct s_dlst	*prv;
 	struct s_dlst	*nxt;
+	struct s_dlst	*prv;
 }					t_dlst;
 
 typedef struct		s_file_mem
@@ -164,6 +164,9 @@ void				ft_lsdelone(t_lst **alst, void (*del)(void *));
 void				ft_lsiter(t_lst *lst, void (*f)(t_lst *elem));
 void				ft_lspush(t_lst **alst, t_lst *new);
 void				ft_lspush_back(t_lst **alst, t_lst *new);
+t_dlst				*ft_dlsnew(void *content);
+void				ft_dlspush(t_dlst **alst, t_dlst *new);
+void				ft_dlspush_back(t_dlst **alst, t_dlst *new);
 int					ft_intsize(unsigned int nbr);
 int					ft_intsize_base(unsigned int nbr, unsigned int base);
 int					ft_longsize_base(unsigned long nbr, unsigned int base);

@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/10/11 11:44:11 by tmanet           ###   ########.fr        #
+#    Updated: 2017/10/11 12:00:03 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,9 @@ SRC = ft_arraystrdel.c \
 	  ft_atoui_base.c \
 	  ft_bzero.c \
 	  ft_ctop.c \
+	  ft_dlsnew.c \
+	  ft_dlspush.c \
+	  ft_dlspush_back.c \
 	  ft_error.c \
 	  ft_intsize.c \
 	  ft_intsize_base.c \
