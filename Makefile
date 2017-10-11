@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/10/11 10:50:38 by tmanet           ###   ########.fr        #
+#    Updated: 2017/10/11 11:44:11 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ NAME = libft.a
 CC = gcc
 
 FLAGS = -c -Wall -Wextra -Werror
+
+HEADERS = libft.h
 
 SRC = ft_arraystrdel.c \
 	  ft_atoi.c \
@@ -37,6 +39,12 @@ SRC = ft_arraystrdel.c \
 	  ft_longlongsize_base.c \
 	  ft_longrange_base.c \
 	  ft_longsize_base.c \
+	  ft_lsdel.c \
+	  ft_lsdelone.c \
+	  ft_lsiter.c \
+	  ft_lsnew.c \
+	  ft_lspush.c \
+	  ft_lspush_back.c \
 	  ft_lstadd.c \
 	  ft_lstdel.c \
 	  ft_lstdelone.c \
@@ -196,12 +204,12 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADERS)
 	@ar rc $(NAME) $(OBJ)
 	@echo "COMPILATION de $(NAME)"
 	@ranlib $(NAME)
 
-%.o: %.c $@
+%.o: %.c $@ $(HEADERS)
 	@$(CC) $(FLAGS) $<
 	@echo "compilation de $<"
 

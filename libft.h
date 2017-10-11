@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/11 10:51:59 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/11 11:41:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,19 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_lst
+{
+	void			*cnt;
+	struct s_lst	*nxt;
+}					t_lst;
+
+typedef struct		s_dlst
+{
+	void			*cnt;
+	struct s_dlst	*prv;
+	struct s_dlst	*nxt;
+}					t_dlst;
 
 typedef struct		s_file_mem
 {
@@ -145,6 +158,12 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstpush_back(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_lst				*ft_lsnew(void *content);
+void				ft_lsdel(t_lst **alst, void (*del)(void *));
+void				ft_lsdelone(t_lst **alst, void (*del)(void *));
+void				ft_lsiter(t_lst *lst, void (*f)(t_lst *elem));
+void				ft_lspush(t_lst **alst, t_lst *new);
+void				ft_lspush_back(t_lst **alst, t_lst *new);
 int					ft_intsize(unsigned int nbr);
 int					ft_intsize_base(unsigned int nbr, unsigned int base);
 int					ft_longsize_base(unsigned long nbr, unsigned int base);
