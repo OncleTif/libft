@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/06 18:46:32 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/11 10:51:59 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char				ft_ctop(char c);
 void				ft_error(char *str);
 void				ft_putchar_fd(char c, int fd);
 int					get_next_line(int const fd, char **line);
+int					get_next_multiline(int fd, char **str_add);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putchar(char c);

@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/10/06 18:46:59 by tmanet           ###   ########.fr        #
+#    Updated: 2017/10/11 10:50:38 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -132,6 +132,7 @@ SRC = ft_arraystrdel.c \
 	  ft_ulltoaa_base.c \
 	  ft_ultoaa_base.c \
 	  get_next_line.c \
+	  get_next_multiline.c \
 	  get_substr_sep.c \
 	  ft_printf.c \
 	  ft_dprintf.c \
