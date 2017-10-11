@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/10/11 12:00:03 by tmanet           ###   ########.fr        #
+#    Updated: 2017/10/11 16:27:39 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRC = ft_arraystrdel.c \
 	  ft_longsize_base.c \
 	  ft_lsdel.c \
 	  ft_lsdelone.c \
+	  ft_lsgetelem.c \
 	  ft_lsiter.c \
 	  ft_lsnew.c \
 	  ft_lspush.c \
