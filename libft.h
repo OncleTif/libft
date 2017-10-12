@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/11 16:13:14 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/12 11:04:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,6 +157,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstpush_back(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void				ft_lsiterparam(t_lst *lst, void *parm,
+		void (*f)(t_lst *elem, void *pa));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_lst				*ft_lsnew(void *content);
 void				ft_lsdel(t_lst **alst, void (*del)(void *));
