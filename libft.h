@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/12 11:04:15 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/12 11:10:28 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,6 +170,9 @@ t_lst				*ft_lsgetelem(t_lst *lst, int pos);
 t_dlst				*ft_dlsnew(void *content);
 void				ft_dlspush(t_dlst **alst, t_dlst *new);
 void				ft_dlspush_back(t_dlst **alst, t_dlst *new);
+void				ft_dlsiter(t_dlst *lst, void (*f)(t_dlst *elem));
+void				ft_dlsiterparam(t_dlst *lst, void *param,
+		void (*f)(t_dlst *, void *));
 int					ft_intsize(unsigned int nbr);
 int					ft_intsize_base(unsigned int nbr, unsigned int base);
 int					ft_longsize_base(unsigned long nbr, unsigned int base);
