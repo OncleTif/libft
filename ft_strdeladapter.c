@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlsdelone.c                                     :+:      :+:    :+:   */
+/*   ft_strdeladapter.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/12 15:52:34 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/13 12:42:37 by tmanet           ###   ########.fr       */
+/*   Created: 2017/10/13 12:40:15 by tmanet            #+#    #+#             */
+/*   Updated: 2017/10/13 12:44:32 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_dlsdelone(t_dlst **alst, void (*del)(void **))
+void	ft_strdeladapter(void **ptr)
 {
-	t_dlst	*tmp;
-
-	if (alst)
-	{
-		tmp = *alst;
-		del(&tmp->cnt);
-		ft_memdel((void**)alst);
-		*alst = NULL;
-	}
+	ft_strdel((char**)ptr);
 }
