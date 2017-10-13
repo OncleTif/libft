@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/10/12 15:54:57 by tmanet           ###   ########.fr        #
+#    Updated: 2017/10/13 11:39:32 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC = ft_arraystrdel.c \
 	  ft_dlsiter.c \
 	  ft_dlsiterparam.c \
 	  ft_dlsmap.c \
+	  ft_dlsmap_order.c \
 	  ft_dlsnew.c \
 	  ft_dlspush.c \
 	  ft_dlspush_back.c \

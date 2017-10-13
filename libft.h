@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/12 15:53:39 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/13 11:38:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,6 +176,8 @@ void				ft_dlsiter(t_dlst *lst, void (*f)(t_dlst *elem));
 void				ft_dlsiterparam(t_dlst *lst, void *param,
 		void (*f)(t_dlst *, void *));
 t_dlst				*ft_dlsmap(void *ptr, t_dlst *(*f)(void **));
+t_dlst				*ft_dlsmap_order (void *ptr, t_dlst *(*f)(void **),
+		void *(fs)(t_dlst**, t_dlst*));
 int					ft_intsize(unsigned int nbr);
 int					ft_intsize_base(unsigned int nbr, unsigned int base);
 int					ft_longsize_base(unsigned long nbr, unsigned int base);
