@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/13 12:45:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/13 15:40:59 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,6 +170,7 @@ t_lst				*ft_lsgetelem(t_lst *lst, int pos);
 void				ft_dlsdel(t_dlst **alst, void (*del)(void **));
 void				ft_strdeladapter(void **ptr);
 void				ft_dlsdelone(t_dlst **alst, void (*del)(void **));
+t_dlst				*ft_dlsgetlast(t_dlst *lst);
 t_dlst				*ft_dlsnew(void *content);
 void				ft_dlspush(t_dlst **alst, t_dlst *new);
 void				ft_dlspush_back(t_dlst **alst, t_dlst *new);
