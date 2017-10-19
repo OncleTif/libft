@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 11:49:24 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/13 15:30:05 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/19 12:31:40 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 void	ft_dlspush(t_dlst **alst, t_dlst *new)
 {
+	t_dlst	*cur;
+
 	if (new && alst)
 	{
-		new->nxt = *alst;
-		if (new->nxt)
+		cur = *alst;
+		new->nxt = cur;
+		if (cur)
 		{
-			new->prv = new->nxt->prv;
-			new->nxt->prv = new;
+			new->prv = cur->prv;
+			cur->prv = new;
+			if (new->prv)
+				new->prv->nxt = new;
 		}
 		*alst = new;
 	}
