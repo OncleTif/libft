@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2017/10/13 15:40:59 by tmanet           ###   ########.fr       */
+/*   Updated: 2017/10/25 13:54:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,4 +196,5 @@ void				ft_lstsortrev(t_list **head, int (*f)(t_list *, t_list *));
 char				*get_substr_sep(const char *str, int pos, char sep);
 char				*ft_strchr_replace(char *str, char src, char dst);
 char				last_char(char *str);
+int					ft_putendl_adapt(char *str, int ret);
 #endif

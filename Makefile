@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2017/10/13 15:42:41 by tmanet           ###   ########.fr        #
+#    Updated: 2017/10/25 13:54:27 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,6 +90,7 @@ SRC = ft_arraystrdel.c \
 	  ft_putchar.c \
 	  ft_putchar_fd.c \
 	  ft_putendl.c \
+	  ft_putendl_adapt.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr.c \
 	  ft_putnbr_base.c \
